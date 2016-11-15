@@ -4,14 +4,43 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+
     tools:context="jast.org.simple_signature_app.MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/m_text_view"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:gravity="center"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:textSize="15pt" />
+
+
+    <jast.org.simple_signature_app.widget.DrawingView
+        android:id="@+id/m_drawing_view_signature_please"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/m_text_view" />
+
+
+    <Button
+        android:id="@+id/m_button_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/m_button_clear"
+        android:onClick="onClick"
+        android:text="@android:string/ok" />
+
+    <Button
+        android:id="@+id/m_button_clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="onClick"
+        android:text="@android:string/cancel" />
+
+
 </RelativeLayout>
